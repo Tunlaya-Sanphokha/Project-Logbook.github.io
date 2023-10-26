@@ -16,4 +16,4 @@ __ข้อดี__
 * Stylishness: node-red dashboard ที่ใช้สร้างหน้าจอ UI อาจไม่สวยหรือตกแต่งได้น้อย
 * Performance: performance ของ Node-RED อาจไม่ดีเทียบกับการเขียนโค้ดเอง
 
-#### [Home](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/index.html)
+#### [Back to Homepage](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/index.html)
