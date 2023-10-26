@@ -15,3 +15,5 @@ __ข้อดี__
 * Created node not work: node ที่สร้างเองอาจไม่สามารถทำงานได้ดีกับ node อื่นๆ
 * Stylishness: node-red dashboard ที่ใช้สร้างหน้าจอ UI อาจไม่สวยหรือตกแต่งได้น้อย
 * Performance: performance ของ Node-RED อาจไม่ดีเทียบกับการเขียนโค้ดเอง
+
+#### [Home](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/index.html)
