@@ -8,7 +8,7 @@
 
 โดยจะเริ่มต้นทำการติดตั้งดังนี้  เพื่อเป็นการอัปเดตแพคเกจและติดตั้งแพคเกจในระบบ Ubuntu  
 
-``` sudo apt-get update
+```sudo apt-get update
 sudo apt-get install \
     ca-certificates \
     curl \
