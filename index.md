@@ -58,6 +58,6 @@ __ส่วนที่2__
 ### งานส่วนที่ 1
 
 #### [ศึกษา Docker, Home assistant, Node-RED, MQTT, InfluxDB และ Grafana](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/link.html)
-#### [ติดตั้ง Home Assistant Container](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/Install_HomeAssistantContainer.html)
 #### [ติดตั้ง Docker and Portainer](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/Install_DockerAndPortainer.html)
+#### [ติดตั้ง Home Assistant Container](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/Install_HomeAssistantContainer.html)
 
