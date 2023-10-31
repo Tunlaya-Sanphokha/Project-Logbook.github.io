@@ -6,7 +6,8 @@
 
 โดยสามารถอ่านเอกสารได้เพิ่มเติม [ Docker Engine](https://docs.docker.com/engine/install/debian/)   
 
-โดยจะเริ่มต้นทำการติดตั้งดังนี้  เพื่อเป็นการอัปเดตแพคเกจและติดตั้งแพคเกจในระบบ Ubuntu
+โดยจะเริ่มต้นทำการติดตั้งดังนี้  เพื่อเป็นการอัปเดตแพคเกจและติดตั้งแพคเกจในระบบ Ubuntu  
+
 ``` sudo apt-get update
 sudo apt-get install \
     ca-certificates \
