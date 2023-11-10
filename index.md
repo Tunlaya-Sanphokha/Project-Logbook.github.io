@@ -22,7 +22,7 @@
 วัตถุประสงค์ของโครงการนี้ ก็เพื่อออกแบบและพัฒนาระบบซอฟต์แวร์ในการแสดงผลข้อมูลจากอุปกรณ์เซนเซอร์ รวมถึงการศึกษาความเหมาะสมของการนำซอฟต์แวร์ตามที่ได้กล่าวไปมาประยุกต์ใช้งาน เปรียบเทียบกับการพัฒนาซอฟต์แวร์เอง ในรูปแบบ WebApp for Data Visualization ซึ่งเป็นอีกทางเลือกหนึ่ง
 
 <p align="center">
-  <img src="picture/diagram.jpg" alt="diagram" width="650" heigh="650"/>
+  <img src="picture/diagram1.png" alt="diagram" width="650" heigh="650"/>
 </p>
 
 <p align="center">
