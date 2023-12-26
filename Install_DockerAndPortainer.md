@@ -39,7 +39,7 @@ sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/bin/docker-compos
 sudo chmod u+x /usr/bin/docker-compose
 ```
 ### Setting up permissions
-ต่อไปเราจะทไการตั้งค่า เพื่ออนุญาตให้ผู้ใช้ที่ไม่ใช่ผู้ดูแลระบบ (ในที่นี้จะตั้งชื่อว่า sysadmin) เพื่อดำเนินการรูทโดยใช้ sudo และเรียกใช้ docker และ docker-compose  
+ต่อไปเราจะทำการตั้งค่า เพื่ออนุญาตให้ผู้ใช้ที่ไม่ใช่ผู้ดูแลระบบ (ในที่นี้จะตั้งชื่อว่า sysadmin) เพื่อดำเนินการรูทโดยใช้ sudo และเรียกใช้ docker และ docker-compose  
 ```
 su # enter root password
 # install sudo
@@ -48,6 +48,6 @@ gpasswd -a sysadmin sudo
 # add sysadmin to docker group
 gpasswd -a sysadmin docker
 ```
-Exit SSH session and login as the non-admin user again for changes to apply.
+เข้าสู่ระบบในฐานะผู้ใช้ที่ไม่ใช่ผู้ดูแลระบบอีกครั้งเพื่อให้เกิดเปลี่ยนแปลงที่ได้ตั้งค่าไว้
 
 
