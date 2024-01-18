@@ -50,4 +50,52 @@ gpasswd -a sysadmin docker
 ```
 เข้าสู่ระบบในฐานะผู้ใช้ที่ไม่ใช่ผู้ดูแลระบบอีกครั้งเพื่อให้เกิดเปลี่ยนแปลงที่ได้ตั้งค่าไว้
 
+### ติดตั้ง Portainer
+#### docker-compose.yaml  
+ในการติดตั้ง Portainer เราจะทำการสร้าง docker-compose script เพื่อที่เราจะสามารถเปิดใช้งานเพื่อไว้ตั้งค่า ทุกๆอย่าง ในนี้ 
 
+```
+cd /opt
+sudo nano docker-compose.yaml  # or file editor of choice
+# Edit file, see below
+# Save and Close via Ctrl+O and Ctrl+X
+
+```
+นอกจากนี้ เราจะทำการกำหนดค่า Docker config และ vulumes ใน โฟลเดอร์ /opt ทำให้การสำรองข้อมูลทุกอย่างง่ายขึ้น volumes เหล่านี้จะจัดเก็บข้อมูลจาก Docker image ไว้ในเครื่องดังนั้นข้อมูญจะไม่สูญหายเมื่อ มีการสร้าง container ขึ้นใหม่  
+
+บางครั้งเราอาจจะต้องเปิดเผย local file, socket หรือ device ไปยัง Docker container เพื่อให้สามารถเข้าถึง file/socket/device ดังกล่าวได้ เราจะต้องทำการเปิดเผยไฟล์ที่เก็บการตั้งค่า local time ให้กับ Portainer รู้ว่าเป็นเวลาใด (สำหรับ log timestamps) รวมถึง socket ที่ควบคุม Docker เพื่อให้ Container สามารถดำเนินการใน Docker ได้  
+```
+version: '3.0'
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: unless-stopped
+    ports:
+      - "9000:9000/tcp"
+      - "9443:9443/tcp"
+    environment:
+      - TZ=Europe/Brussels
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data
+
+```  
+### Permissions  
+นอกจากนี้ เรายังจะสามารถอนุญาตให้ ผู้ใช้ที่ไม่ใช่ผู้ดูแลระบบแก้ไขไฟล์นี้ได้ โดยผ่านคำสั่งดังนี้
+```  
+sudo chown root:docker docker-compose.yaml
+sudo chmod g+w docker-compose.yaml
+```
+### Check config  
+เนื่องจากเราต้องการให้แน่ใจ ว่า สามารถใช้งาน และไม่ได้ทำอะไรผิดพลาดใน docker-compose.yaml เราจะทำการเรียกใช้คำสั่งต่อไปนี้ จากนั้น Docker จะแสดงสิ่งที่จะทำงาน รวมถึงข้อผิดพลาดในการ กำหนดค่า และคำเตือนที่เกี่ยวข้อง
+```
+docker-compose -f docker-compose.yaml config
+```
+### Launch  
+ตอนนี้เมื่อเราทำการรัน docker-compose up -d และ Docker จะดาวน์โหลด Portainer image ล่าสุด และตั้งค่าทุกอย่าง เมื่อเสร็จแล้วเราจะสามารถเปิด Portainer web interface ได้โดยไปที่ http:/ /<ip.of.our.box>:9000 จะแสดงหน้าเว็บดังนี้
+<p align="center">
+  <img src="picture/2_/2_.png" alt="Docker" width="500" heigh="700"/>
+</p>
