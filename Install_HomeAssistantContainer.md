@@ -28,8 +28,10 @@ services:
     privileged: true
     network_mode: host
 ```
-ภาพการตั้งค่าตัวอย่าง  
+ตัวอย่าง  
 <p align="center">
-  <img src="picture/2_/2_.png" alt="Docker" width="500" heigh="700"/>
+  <img src="picture/3/3.0.png" alt="Docker" width="500" heigh="700"/>
 </p>
+
+### Check config  
 
