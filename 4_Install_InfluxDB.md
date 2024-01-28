@@ -36,11 +36,12 @@ services:
         hard: 32768
 ```
 
-<p style="text-align: center;">ภาพตัวอย่าง การกำหนดค่า container influxDB ใน docker-compose.yaml</p> 
-
 <p align="center">
   <img src="picture/4/4.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ภาพตัวอย่าง การกำหนดค่า container influxDB ใน docker-compose.yaml</p>   
+
 
 ### Environment variables 
 
@@ -93,36 +94,41 @@ WARN[0000] The "INFLUXDB_BUCKET" variable is not set. Defaulting to a blank stri
       - mariadb
       - influxdb
 ```
-<p style="text-align: center;">ตัวอย่างการเพิ่ม depend_on</p>  
 
 <p align="center">
   <img src="picture/4/4.1.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ตัวอย่างการเพิ่ม depend_on</p>  
 
 ### Initial run  
 ในการ รัน ครั้งแรก เราสามารถรัน docker-compose up -d เพื่อเป็นการติดตั้ง container InfluxDB ได้แล้ว  
-จะสามารถสังเกตเห็นว่า container Home Assistant ถูกสร้างขึ้นใหม่เมื่อมีการกำหนดค่า config ที่มีการเปลี่ยนแปลง  
-ภาพตัวอย่าง container เมื่อใช้คำสั่ง docker-compose up -d  
+จะสามารถสังเกตเห็นว่า container Home Assistant ถูกสร้างขึ้นใหม่เมื่อมีการกำหนดค่า config ที่มีการเปลี่ยนแปลง    
+  
 
 <p align="center">
   <img src="picture/4/4.2.png" alt="Docker" width="600" heigh="800"/>
 </p>  
 
+<p style="text-align: center;">ภาพตัวอย่าง container เมื่อใช้คำสั่ง docker-compose up -d</p>
+
 ### InfluxDB Token  
 ในตอนนี้ InfluxDB container ของเรากำลังทำงานอยู่ เราจะสามารถเปิด WebUI เพื่อทำการรับ token ซึ่งเราจะต้องใช้ token ในภายหลังเพื่อให้ Home Assistant เข้าถึงที่เก็บข้อมูล bucket ที่เราสร้างขึ้นใหม่  
 ทำการเปิด browser  แล้วไปที่  http://<ip.of.our.box>:8086 และทำการเข้าสู่ระบบ โดยใช้ข้อมูลที่เราได้ทำการตั้งค่าในไฟล์ .env  
-ภาพแสดงตัวอย่างการ login InfluxDB  
 
 <p align="center">
   <img src="picture/4/4.3.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ภาพแสดงตัวอย่างการ login InfluxDB</p>  
 
 หลังจากนั้นไปที่ เมนู API token และ  generate API token ทำการเลือก All Access API Token  
-ภาพแสดงหน้าเมนู generate API token  
 
 <p align="center">
   <img src="picture/4/4.4.1.png" alt="Docker" width="600" heigh="800"/>
 </p>   
+
+<p style="text-align: center;">ภาพแสดงหน้าเมนู generate API token</p>
 
 ทำการใส่ Description เมื่อทำการ generate แล้วจะได้ดังนี้  
 
@@ -138,12 +144,13 @@ cd /opt/homeassistant/config/
 sudo nano configuration.yaml
 ```
 
-โดยเราจะสามารถเห็น การกำหนดค่า config ที่มีไว้อยู่แล้ว   
-ภาพตัวอย่างแสดง config ที่มีไว้อยู่แล้ว  
+โดยเราจะสามารถเห็น การกำหนดค่า config ที่มีไว้อยู่แล้ว     
 
 <p align="center">
   <img src="picture/4/4.5.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ภาพตัวอย่างแสดง config ที่มีไว้อยู่แล้ว</p>  
 
 เพิ่มการ config ดังนี้  
 
@@ -204,11 +211,12 @@ influx_org: "sequr"
 ### Restart  
 หลังจากบันทึกไฟล์แล้ว ให้ทำการเปิด Web interface Home Assistant และไปที่ Developer Tools > YAML  ทำการคลิกและทำการ Check Configuration เพื่อให้แน่ใจว่า เราไม่ได้ทำอะไรผิดพลาด   
 
-ภาพแสดงว่า config ของเราได้รับการตรวจสอบแล้ว  
 
 <p align="center">
   <img src="picture/4/4.6.png" alt="Docker" width="600" heigh="800"/>
-</p>    
+</p>   
+
+<p style="text-align: center;">ภาพแสดงว่า config ของเราได้รับการตรวจสอบแล้ว</p>  
 
 หากเราได้รับข้อความว่า "Configuration valid!"  เราสามารถทำการกด restart ทางด้านขวาเพื่อเป็นการ restart Home Assistant ซึ่งจะเป็นการใช้การเปลี่ยนแปลงทั้งหมดที่เราทำกับไฟล์ configuration.yaml  
 
@@ -230,10 +238,14 @@ panel_iframe:
 
 หลังจากนั้นให้ทำการตรวจสอบ configuration อีกครั้ง ทำการ restart Home Assistant และ ทำการกลับเข้ามาทำการเปิด การออนไลน์ ของ Home Assistant อีกครั้ง เราจะพบกับ โลโก้ Docker ในแถบด้านข้าง และ เมื่อทำการคลิกเพื่อเปิด ก็จะเป็นการเปิดหน้า Portainer ในมุมมองของ Dashboard ได้เลย  
 
-ภาพตัวอย่าง Portainer ใน Home Assistant  
+ 
 
 <p align="center">
   <img src="picture/4/4.7.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ภาพตัวอย่าง Portainer ใน Home Assistant</p>
 
 เป็นอันเสร็จสิ้น 
+
+[Home](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/)
