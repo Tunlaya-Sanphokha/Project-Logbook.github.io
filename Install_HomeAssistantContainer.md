@@ -28,10 +28,12 @@ services:
     privileged: true
     network_mode: host
 ```
-ภาพตัวอย่าง ไฟล์ docker-compose.yaml  
+
 <p align="center">
   <img src="picture/3/3.0.png" alt="Docker" width="500" heigh="700"/>
-</p>
+</p>  
+
+<p style="text-align: center;">ภาพตัวอย่าง ไฟล์ docker-compose.yaml</p>  
 
 ### Check config  
 ทำการ Check config โดยฝช้คำสั่ง ดังนี้  
@@ -104,10 +106,11 @@ networks:
     name: opt_default
 ```
 
-ภาพตัวอย่างการใช้ คำสั่ง docker-compose -f docker-compose.yaml config  
 <p align="center">
   <img src="picture/3/3.1.png" alt="Docker" width="600" heigh="800"/>
 </p>  
+
+<p style="text-align: center;">ภาพตัวอย่างการใช้ คำสั่ง docker-compose -f docker-compose.yaml config</p>
 
 ### Launch container  
 โดยเราจะต้องทำการสร้าง config directory ที่เราจะใช้ในการกำหนดค่า และ เรียกใช้ docker-compose  
@@ -124,27 +127,32 @@ docker-compose up -d
 ***เนื่องจากทางผู้จัดทำได้ทำการติดตั้งไว้แล้ว จึงแสดงการ running ได้ดังนี้*** 
 <p align="center">
   <img src="picture/3/3.1.1.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>    
+
+<p style="text-align: center;">ภาพตัวอย่างการใช้ docker-compose up -d</p>
 
 ###  Set up Home Assistant  
 
 ตอนนี้ container เริ่มการทำงานแล้ว เราจะทำการ ตั้งค่า login Home Assistant   
 
-ทำการเปิด browser และไปที่ http://<ip.of.our.box>:8123  
-ภาพแสดงหน้าเว็บ Home Assistant 
+ทำการเปิด browser และไปที่ http://<ip.of.our.box>:8123   
 
 <p align="center">
   <img src="picture/3/3.2.png" alt="Docker" width="600" heigh="800"/>
 </p>  
 
+<p style="text-align: center;">ภาพแสดงหน้าเว็บ Home Assistant</p> 
+
+
 ทำการตั้งค่าชื่อผู้ใช้ และ รหัสผ่านสำหรับบัญชี Home Assistant ซึ่งบัญชีนี้จะเป็น บัญชี "admin"  โดยเราสามารถตั้งค่าโซนบ้าน และ ข้อมูลใดๆก็ตามที่ต้องการแชร์ หรือ ข้อมูลที่ต้องการปรับปรุงใน Home Assistant   
 
 เมื่อทำการตั้งค่าเสร็จแล้ว สามารถไปที่ Home Assistant Dashboard หากเรามีการกำหนดค่าอุปกรณ์ หรือ ข้อมูลใดๆ ในขั้นตอนก่อนหน้า จะแสดงบน Dashboard นี้  
 
-ภาพแสดงหน้า Dashboard ของ Home Assistant 
 
 <p align="center">
   <img src="picture/3/3.3.png" alt="Docker" width="600" heigh="800"/>
-</p>  
+</p>   
 
+<p style="text-align: center;">ภาพแสดงหน้า Dashboard ของ Home Assistant</p>  
 
+#### [Back to Homepage](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/index.html)
