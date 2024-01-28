@@ -98,4 +98,10 @@ docker-compose -f docker-compose.yaml config
 ตอนนี้เมื่อเราทำการรัน docker-compose up -d และ Docker จะดาวน์โหลด Portainer image ล่าสุด และตั้งค่าทุกอย่าง เมื่อเสร็จแล้วเราจะสามารถเปิด Portainer web interface ได้โดยไปที่ http:/ /<ip.of.our.box>:9000 จะแสดงหน้าเว็บดังนี้
 <p align="center">
   <img src="picture/2_/2_.png" alt="Docker" width="500" heigh="700"/>
-</p>
+</p>  
+
+<p style="text-align: center;">ภาพตัวอย่าง Portainer</p>  
+
+#### [Back to Homepage](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/index.html)  
+
+
