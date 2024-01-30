@@ -164,7 +164,6 @@ docker exec -it mosquitto mosquitto_passwd /mosquitto/config/mqttuser nodered
 2.Double-click เพื่อเปิดการตั้งค่า configuration  
 3.Add new MQTT server  
 4.ใน tab Connection กรอก server address (ip.of.our.box) และ Port (1883) ของ broker ของเรา และเลือก cilent ID หรือ Node-Red generate แบบสุ่ม โดยสามารถเลือก MQTT V5 ได้หากเราต้องการให้ Mosquitto support ทั้งสองอย่าง แต่ในที่นี้เราได้ทำการเลือกเป็น MQTT V3.1 Protocal  
-
 5.ใน tab Security ให้ป้อนชื่อ username และ password สำหรับ MQTT user ที่เราเพิ่งสร้างขึ้น  
 6.ทำการ Add,Save และ deploy เพื่อจัดเก็บการเปลี่ยนแปลง  
 
