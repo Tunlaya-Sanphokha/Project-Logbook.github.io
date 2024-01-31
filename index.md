@@ -64,3 +64,5 @@ __ส่วนที่2__
 
 #### [ติดตั้ง Mosquitto Docker Container](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/5_Install_MQTT.html)  
 #### [ติดตั้ง Node-Red](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/6_Install_NodeRed.html)
+#### [ติดตั้ง ESPHome](https://tunlaya-sanphokha.github.io/Project-Logbook.github.io/7_Install_ESPHome.html)  
+
